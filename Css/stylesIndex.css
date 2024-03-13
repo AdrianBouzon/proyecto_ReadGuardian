@@ -1,0 +1,127 @@
+
+body,
+html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.header {
+    background-color: #f8f9fa;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    align-items: center;
+    z-index: 1000;
+}
+
+.header-logo {
+
+}
+
+.header-user {
+    margin-right: 40px;
+
+}
+
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.main-content {
+    flex: 1;
+    padding: 6px;
+    margin-right: 20px;
+    margin-top: 80px;
+}
+
+.navbar-lateral {
+    width: 100%;
+    max-width: 200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 4.5%;
+    padding-top: 40px;
+    height: auto;
+    position: static;
+    z-index: 1;
+    margin-left: 0;
+}
+
+.nav-item{
+    margin-top: 20px;
+}
+
+
+/* Media Query para pantallas más grandes */
+@media (min-width: 992px) {
+    .navbar-lateral {
+        width: 20%;
+        position: fixed;
+        height: 100%;
+    }
+
+    .main-content {
+        margin-left: 25%;
+    }
+}
+
+h1{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.card-img-top {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+.card-body {
+    padding: 1.5rem;
+}
+.card-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.12rem;
+    font-weight: 600;
+    text-align: center;
+}
+.card-text {
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.custom-cards{
+    width: 80%;
+}
+
+/* Estilo para el campo de búsqueda */
+.form-inline input[type="text"] {
+    width: 500px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Estilo para centrar el formulario de búsqueda */
+.form-inline {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+
+/*Para resaltar la pagina actual en el menu lateral*/
+.nav-item.active {
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+}

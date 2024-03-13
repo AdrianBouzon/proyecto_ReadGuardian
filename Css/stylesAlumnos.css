@@ -1,0 +1,32 @@
+  /* Estilos para la tabla de alumnos */
+            .table-alumnos {
+                width: 100%;
+                margin-top: 20px;
+                border-collapse: collapse;
+                border-spacing: 0;
+                margin-left: 40px;
+                margin-right: 40px;
+            }
+
+            .table-alumnos th, .table-alumnos td {
+                padding: 12px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .table-alumnos th {
+                background-color: #f2f2f2;
+
+            }
+
+            .table-alumnos tbody tr:hover {
+                background-color: #f5f5f5;
+            }
+
+            /* Estilos adicionales para la columna de email */
+            .table-alumnos th.email, .table-alumnos td.email {
+                max-width: 100px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }

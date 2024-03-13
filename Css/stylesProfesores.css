@@ -1,0 +1,33 @@
+
+            /* Estilos para la tabla de profesores */
+            .table-profesores {
+                width: 100%;
+                margin-top: 20px;
+                border-collapse: collapse;
+                border-spacing: 0;
+                margin-left: 40px;
+                margin-right: 40px;
+            }
+
+            .table-profesores th, .table-profesores td {
+                padding: 12px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .table-profesores th {
+                background-color: #f2f2f2;
+
+            }
+
+            .table-profesores tbody tr:hover {
+                background-color: #f5f5f5;
+            }
+
+            /* Estilos adicionales para la columna de email */
+            .table-profesores th.email, .table-profesores td.email {
+                max-width: 100px;  
+                overflow: hidden;
+                text-overflow: ellipsis;  /* Añade puntos suspensivos si el contenido es demasiado largo */
+                white-space: nowrap;
+            }
