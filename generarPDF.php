@@ -40,7 +40,7 @@ $pdf->Ln(10);
 // Establece la posición para la fecha en la esquina superior derecha
 $pdf->SetXY(150, 10);
 $pdf->SetFont('helvetica', '', 10);
-$pdf->Cell(0, 0, 'Fecha: ' . date('d-m-Y'), 0, 1, 'R'); 
+$pdf->Cell(0, 0, 'Fecha: ' . date('d-m-Y'), 0, 1, 'R'); // la R indica alineacion a la derecha.
 $pdf->Ln(10);
 $result = mysqli_query($conn, $consulta);
 

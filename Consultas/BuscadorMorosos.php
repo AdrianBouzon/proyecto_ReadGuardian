@@ -18,7 +18,7 @@ if (isset($_GET['busqueda'])) {
         AND (Alumnos.nombre LIKE '%$busqueda%' OR Alumnos.numCarnet LIKE '%$busqueda%')
         LIMIT $inicio, $registrosPorPagina";
 } else {
-    // Si no se ha enviado el formulario, muestra todos los morosos
+    // Si no se ha enviado el formulario, muestra todos los morosos por defecto
     $query = "SELECT Prestamos.id_libro, Libros.nombre AS nombre_libro, Usuarios.usuario AS nombre_bibliotecario, 
             Alumnos.nombre AS nombre_alumno, Alumnos.apellido1, Alumnos.apellido2, Alumnos.curso, Alumnos.numCarnet, Prestamos.CodPrestamo,
             Prestamos.fecha_prestamo, Prestamos.fecha_devolucion
