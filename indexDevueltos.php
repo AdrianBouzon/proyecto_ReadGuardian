@@ -177,12 +177,14 @@ $inicio = ($pagina_actual - 1) * $registrosPorPagina;
                 </button>
                 <!-- Formulario de búsqueda -->
                 <form action="" method="GET" class="form-inline mt-2 mt-md-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Buscar alumno" name="busqueda" aria-label="Search">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Buscar alumno o nºCarnet" name="busqueda" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar </button>
                 </form>
 
                 <div class="row">
-
+                    <?php
+                    include 'Consultas/BuscadorDevueltos.php';
+                    ?>
                     <table class="table table-bordered table-prestamos">
                         <thead>
                             <tr>
@@ -252,7 +254,7 @@ $inicio = ($pagina_actual - 1) * $registrosPorPagina;
                                 echo '<td>' . $row['curso'] . '</td>';
                                 echo '<td>' . $row['fecha_prestamo'] . '</td>';
                                 echo '<td id="fechaDev_' . $row['CodPrestamo'] . '">' . obtenerFechaDevolucion($row['CodPrestamo']) . '</td>';
-                                echo '<td>' .  obtenerFechaDevolucionReal($row['CodPrestamo']). '</td>';
+                                echo '<td>' . obtenerFechaDevolucionReal($row['CodPrestamo']) . '</td>';
                                 echo '</tr>';
                             }
                             ?>
