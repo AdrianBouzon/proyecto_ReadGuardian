@@ -53,26 +53,27 @@ $pdf->Cell(0, 0, 'Fecha: ' . date('d-m-Y'), 0, 1, 'R'); // la R indica alineacio
 $pdf->Ln(10);
 $result = mysqli_query($conn, $consulta);
 
-$pdf->SetFont('helvetica', '', 8);
-$pdf->Cell(45, 10, 'ID libro', 1);
-$pdf->Cell(25, 10, 'ID bibliotecario', 1);
-$pdf->Cell(40, 10, 'ID alumno', 1);
-$pdf->Cell(15, 10, 'Nº Carnet', 1);
-$pdf->Cell(20, 10, 'Curso', 1);
-$pdf->Cell(25, 10, 'Fecha préstamo', 1);
-$pdf->Cell(25, 10, 'Fecha devolución', 1);
-$pdf->Ln();
+$pdf->SetFont('helvetica', 'B', 8); 
+$pdf->Cell(53, 10, 'Libro', 1, 0, 'C'); 
+$pdf->Cell(25, 10, 'Bibliotecario', 1, 0, 'C');
+$pdf->Cell(40, 10, 'Alumno', 1, 0, 'C');
+$pdf->Cell(15, 10, 'NºCarnet', 1, 0, 'C');
+$pdf->Cell(18, 10, 'Curso', 1, 0, 'C');
+$pdf->Cell(22, 10, 'F.Préstamo', 1, 0, 'C');
+$pdf->Cell(22, 10, 'F.Devolución', 1, 1, 'C'); 
+
+
 
 $pdf->SetFont('helvetica', '', 8);
 
 while ($row = mysqli_fetch_assoc($result)) {
-    $pdf->Cell(45, 10, $row['nombre_libro'], 1);
+    $pdf->Cell(53, 10, $row['nombre_libro'], 1);
     $pdf->Cell(25, 10, $row['nombre_bibliotecario'], 1);
     $pdf->Cell(40, 10, $row['nombre_alumno'] . ' ' . $row['apellido1'] . ' ' . $row['apellido2'], 1);
     $pdf->Cell(15, 10, $row['numCarnet'], 1);
-    $pdf->Cell(20, 10, $row['curso'], 1);
-    $pdf->Cell(25, 10, $row['fecha_prestamo'], 1);
-    $pdf->Cell(25, 10, $row['fecha_devolucion'], 1);
+    $pdf->Cell(18, 10, $row['curso'], 1);
+    $pdf->Cell(22, 10, $row['fecha_prestamo'], 1);
+    $pdf->Cell(22, 10, $row['fecha_devolucion'], 1);
     $pdf->Ln();
 }
 
